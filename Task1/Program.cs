@@ -9,9 +9,26 @@
 
 void Main()
 {
+    int N = ReadInt("Введите число M: ");
+    int M = ReadInt("Введите число N: ");
+    Numbers(N,M);
+}
+
+void Numbers(int m, int n)
+{
+    if (m > n)
+        return;
+    {
+        Console.Write($"{m}  ");
+    }
+    Numbers(m + 1, n);
 
 }
 
-
+int ReadInt(string msg)
+{
+    System.Console.Write(msg);
+    return Math.Abs(Convert.ToInt32(Console.ReadLine()));
+}
 
 Main();
